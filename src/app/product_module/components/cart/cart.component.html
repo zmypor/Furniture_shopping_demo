@@ -1,0 +1,7 @@
+<p>您的购物车里总共{{CartItems.length}}件商品</p>
+<div *ngFor="let item of CartItems">
+  <spa-color-list [colors]="item.colors"></spa-color-list>
+  <button spaHighlight class="btn btn-warning remove-item" (click)="removeItem(item)">删除商品</button>
+  <button spaHighlight class="btn btn-primary" routerLink="/products">继续采购</button>
+</div>
+<p class="text-primary">商品总计{{totalAmount() | async}}元</p>

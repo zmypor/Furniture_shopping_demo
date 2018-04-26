@@ -1,0 +1,7 @@
+<div class="nav-bar">
+  <a *ngIf="location.path()!=='/products'" routerLink="/" class="back-button">返回首页</a>
+  <div class="open-shopping-cart" routerLink="/products/cart">
+    <img src="assets/image/购物车.jpg" style="width:70px; height:70px"/>{{(CartItems$ | async).length}}&nbsp;&nbsp;<a class="btn btn-success" routerLink="/cart">查看购物车</a><br/>
+  </div>
+</div>
+<router-outlet></router-outlet>

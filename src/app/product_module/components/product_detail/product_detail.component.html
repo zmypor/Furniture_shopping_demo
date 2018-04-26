@@ -1,0 +1,10 @@
+<div class="product-details">
+  <div class="product">
+  <spa-product [id]="product.id" [name]="product.name"
+               [price]="product.price"  [currency]="product.currency" [imageUrl]="product.imageUrl" [description]="product.description"></spa-product>
+    <spa-color-list [colors]="product.colors"></spa-color-list>
+    <button spaHighlight class="btn-primary" (click)="addToCart(product)">
+     加入购物车
+    </button>
+  </div>
+</div>

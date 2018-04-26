@@ -1,0 +1,21 @@
+<h1 style="color:rgb(6, 99, 99); font-weight: bold">在线家具商城</h1>
+<div class="list-filter">
+  <spa-filter
+    [availableFilters]="filters"
+    [activatedFilters]="activeFilters"
+    (activeFilters)="updateActivatedFilters($event)"
+  ></spa-filter>
+</div>
+   <div class="col-md-12 bg-info p-a-1">
+      <h3>产品名录</h3>
+      <ul style="display: inline-block; margin-left: 0px; overflow: hidden; height: 2300px; width: 900px; background-color: skyblue;">
+      <li style="list-style:none; display: inline-block; margin-left: 5px; height: 280px; width: 260px; border-color: rgb(220, 89, 224)" *ngFor="let item of itemsAfterFilter()">
+      <h4 class="card-header" style="font-weight:bold"><a routerLink="/products/details/{{item.id}}">{{item.name}}</a></h4><br/>
+      <img spaHighlight routerLink="/products/details/{{item.id}}"class="img-thumbnail draggable" style="width:300; height:400; background-color:antiquewhite; border-color:rgb(3, 66, 3); transition:all 0.2s ease-in-out;" [src] = "item.imageUrl" [alt]="item.name"/><br/>
+      <span class="card-body pull-xs-left tag tag-primary" style="font-weight: bold; color: rgb(63, 3, 63)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.currency}}&nbsp;{{item.price}} 
+      </span><br/>
+      <p class="card-text p-a-1" style="color: brown; font-weight:bold;">{{item.description}}</p><br/>
+      <a spaHighlight class="btn btnlarge btn-block btn-primary" routerLink="/products/details/{{item.id}}">立即购买</a><br/>
+      </li>
+      </ul>
+     </div>
