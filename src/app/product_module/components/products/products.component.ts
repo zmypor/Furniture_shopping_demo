@@ -4,8 +4,7 @@ import {ProductService} from '../../../services/product.service';
 import {CartService} from '../../../services/cart.service';
 @Component({
   selector: 'spa-products',
-  templateUrl: 'products.component.html',
-  styleUrls: ['products.component.css']
+  templateUrl: 'products.component.html'
 })
 export class ProductsComponent implements OnInit {
 
