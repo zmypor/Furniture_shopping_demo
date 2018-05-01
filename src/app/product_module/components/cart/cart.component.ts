@@ -6,8 +6,7 @@ import {of} from 'rxjs/observable/of';
 
 @Component({
   selector: 'spa-cart',
-  templateUrl: 'cart.component.html',
-  styleUrls: ['cart.component.css']
+  templateUrl: 'cart.component.html'
 })
 export class CartComponent implements OnInit {
 
